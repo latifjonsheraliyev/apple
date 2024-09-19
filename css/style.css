@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Media query for responsiveness at 280px */
+@media (max-width: 280px) {
+  .flex .links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    background-color: #f35a05;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+  }
+  #check:checked ~ .links {
+    left: 0;
+  }
+
+  .menu .menua {
+    font-size: 12px;
+  }
+
+  .fa-magnifying-glass,
+  .fa-bucket {
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 0 5px;
+  }
+}
+i {
+  cursor: pointer;
+}
+
+.menu .menua {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000000cc;
+}
+
+.menu .menua::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.menu .menua:hover::after {
+  width: 100%;
+}
+
+.position{
+  background-color: rgb(246, 247, 251);
+}
+.header {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 0px 30px;
+
+}
+
+@media (max-width: 1024px) {
+  .flex .links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    background-color: #f35a05;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+  }
+  #check:checked ~ .links {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex .links {
+    width: 60%;
+  }
+}
+
+
+ .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .gridd{
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+    }
